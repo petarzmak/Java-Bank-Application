@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coe528.project.OnlinePurchController">
+   <children>
+      <Label layoutX="39.0" layoutY="29.0" prefHeight="21.0" prefWidth="296.0" text="Welcome to Online Purchase">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="70.0" prefHeight="17.0" prefWidth="440.0" text="Please enter item and it's price in the boxes below: " />
+      <TextField fx:id="myAmount" layoutX="39.0" layoutY="164.0" promptText="Enter Amount" />
+      <Label fx:id="myLabel" layoutX="39.0" layoutY="195.0" text="Label" textFill="#9e0000" />
+      <Button layoutX="207.0" layoutY="164.0" mnemonicParsing="false" onAction="#PurchaseOnline" text="Purchase" />
+      <Button layoutX="28.0" layoutY="342.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="86.0" text="&lt; Back" />
+      <MenuButton fx:id="myMenu" alignment="CENTER" layoutX="557.0" layoutY="28.0" minWidth="99.0" mnemonicParsing="false" text="MenuButton">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#logOut" text="Log Out" />
+        </items>
+      </MenuButton>
+      <TextField fx:id="myItem" layoutX="40.0" layoutY="124.0" promptText="Enter Item" />
+      <Label layoutX="39.0" layoutY="99.0" prefHeight="17.0" prefWidth="373.0" text="Note: Minimum purchase not including processing fee must be $50" />
+      <VBox alignment="TOP_CENTER" layoutX="450.0" layoutY="105.0" prefHeight="89.0" prefWidth="229.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 2;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="342.0" text="Account Level and processing fee:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Platinum: $0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Gold: $10">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Silver: $20">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
